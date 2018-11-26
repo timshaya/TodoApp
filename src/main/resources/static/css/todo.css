@@ -1,0 +1,13 @@
+.hdr_rght_egde h5 {
+	padding-left:15px;
+}
+
+@media (max-width: 575px) {
+ 
+ 	.hdr_todo {
+ 		display: none;
+ 	}
+ 
+}
+
+

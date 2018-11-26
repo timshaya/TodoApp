@@ -1,0 +1,13 @@
+.frm_group_1 {
+	margin-bottom: 0px;
+}
+
+@media (max-width: 575px) {
+ 
+ 	.hdr_todo {
+ 		display: none;
+ 	}
+ 
+}
+
+
