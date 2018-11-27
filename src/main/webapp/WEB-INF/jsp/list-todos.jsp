@@ -21,7 +21,7 @@
 		<div class="col-sm-4"><h5>Description</h5></div>			
 		<div class="col-sm-4"><h5>Date</h5></div>
 		<div class="col-sm-2"><h5>Is it Done?</h5></div>
-		<div class="col-sm-2 text-center hdr_rght_egde"><h5>Delete</h5></div>				
+		<div class="col-sm-2 text-center hdr_rght_egde"><h5>Manage</h5></div>				
 	</div>	
 		
 	<c:forEach items="${todos}" var="todo">
