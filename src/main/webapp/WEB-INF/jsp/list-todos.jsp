@@ -18,17 +18,19 @@
 		<div class="col-sm-4 text-right"><a class="button" href="/add-todo">Add a To Do</a></div>			
 	</div>	
 	<div class="row border-bottom hdr_todo">
-		<div class="col-sm-4"><h5>Description</h5></div>			
-		<div class="col-sm-4"><h5>Date</h5></div>
+		<div class="col-sm-3"><h5>Description</h5></div>			
+		<div class="col-sm-3"><h5>Date</h5></div>
 		<div class="col-sm-2"><h5>Is it Done?</h5></div>
-		<div class="col-sm-2 text-center hdr_rght_egde"><h5>Manage</h5></div>				
+		<div class="col-sm-2"><h5>Changes</h5></div>						
+		<div class="col-sm-2 text-center hdr_rght_egde"><h5>Remove</h5></div>				
 	</div>	
 		
 	<c:forEach items="${todos}" var="todo">
 	<div class="row border-bottom pb-3 pt-3">
-		<div class="col-sm-4">${todo.desc}</div>			
-		<div class="col-sm-4">${todo.targetDate}</div>
+		<div class="col-sm-3">${todo.desc}</div>			
+		<div class="col-sm-3">${todo.targetDate}</div>
 		<div class="col-sm-2">${todo.done}</div>
+		<div class="col-sm-2"><a href="/update-todo?id=${todo.id}" class="btn btn-success">UPDATE</a></div>						
 		<div class="col-sm-2 text-right"><a href="/delete-todo?id=${todo.id}" class="btn btn-warning">DELETE</a></div>				
 	</div>		
 	</c:forEach>	

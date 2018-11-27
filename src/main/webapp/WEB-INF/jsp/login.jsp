@@ -10,19 +10,23 @@
 <body>
 <div] class="container">
 	<div class="row">
-		<div class="col-sm-4">col 1</div>			
-		<div class="col-sm-4">Hey there!
+		<div class="col-sm-4"></div>			
+		<div class="col-sm-4">Login to TODOTHINGY
 			
 			<div class="text-danger">${invalidMessage}</div>
 			
 			<form method="POST">
-				Name: <input type="text" name="name" /><br/>
-				Password: <input type="password" name="password"/>
-				<input type="submit" />
+				<fieldset>
+					<label>User:  </label>     
+					<input type="text" name="name" /><br/>
+					<label>Pass:</label>
+					<input type="password" name="password"/>
+				</fieldset>
+				<button type="submit" class="btn btn-success">Submit</button>
 			</form>
 			
 		</div>
-		<div class="col-sm-4">col 3</div>		
+		<div class="col-sm-4"></div>		
 	</div>
 </div>
 

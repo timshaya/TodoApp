@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Service;
 
 import com.timshaya.springboot.web.TodoApp.model.Todo;
@@ -31,6 +33,15 @@ public class TodoService {
         }
         return filteredTodos;
     }
+    
+    public Todo retrieveTodo(int id) {
+        for (Todo todo : todos) {
+            if (todo.getId() == id) {                
+                return (Todo) todo;
+            }
+        }
+        return null;
+    }
 
     public void addTodo(String name, String desc, Date targetDate,
             boolean isDone) {
@@ -46,4 +57,14 @@ public class TodoService {
             }
         }
     }
+
+	public void updateTodo(@Valid Todo todo) {
+		todos.remove(todo);
+		todos.add(todo);
+	}
+	
+	
+	
+	
+	
 }

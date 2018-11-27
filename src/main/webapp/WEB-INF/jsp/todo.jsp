@@ -23,9 +23,15 @@
 				  https://jira.spring.io/browse/SPR-16037
 			 --%>  
 			<form:form method="POST" modelAttribute="todo">
+				<form:hidden path="id"/>
 				<fieldset class="form-group frm_group_1">
 					<form:label path="desc">Description:</form:label>
-					<form:input path="desc" class="form-control" required="required" type="text" name="description" />			
+					<form:input path="desc" class="form-control" required="required" type="text" name="description" />		
+					
+					<form:label path="targetDate">Target Date:</form:label>
+					<form:input path="targetDate" class="form-control" required="required" type="text" name="target date" />		
+					
+						
 					<form:errors path="desc" cssClass="text-warning"/>
 				</fieldset>
 				<button type="submit" class="btn btn-success">Add</button>
