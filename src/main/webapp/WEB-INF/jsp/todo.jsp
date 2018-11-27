@@ -1,3 +1,5 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <!doctype html>
 <html>
 <head>
@@ -16,14 +18,17 @@
 	</div>
 	<div class="row mt-4 mb-4">
 		<div class="col-sm-4">
-		
-			<form method="POST">
+			
+			<%-- commandName was removed,modelAttribute replaced it
+				  https://jira.spring.io/browse/SPR-16037
+			 --%>  
+			<form:form method="POST" modelAttribute="todo">
 				<fieldset class="form-group frm_group_1">
-					<label>Description:</label>
-					<input class="form-control" required="required" type="text" name="description" /><br/>				
+					<form:label path="desc">Description:</form:label>
+					<form:input path="desc" class="form-control" required="required" type="text" name="description" />			
 				</fieldset>
 				<button type="submit" class="btn btn-success">Add</button>
-			</form>		
+			</form:form>		
 		
 		</div>			
 		<div class="col-sm-4"></div>
