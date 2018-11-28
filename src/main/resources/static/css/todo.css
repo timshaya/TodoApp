@@ -6,6 +6,10 @@
 	margin-bottom: 15px;
 }
 
+.navbar-right li {
+	list-style-type: none;	
+}
+
 @media (max-width: 575px) {
  
  	.hdr_todo {
